@@ -22,3 +22,6 @@ RUN wget -O /tmp/hub.tgz https://github.com/github/hub/releases/download/v2.3.0-
     chmod 755 /usr/local/bin/hub
 
 RUN mkdir -p /go && chgrp -R 0 /go && chmod 777 /go
+
+ADD entrypoint.d/* /entrypoint.d/
+RUN chmod 755 /entrypoint.d/*
