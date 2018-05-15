@@ -2,9 +2,13 @@
 #!/bin/bash
 set -e
 
+echo "Writing git-creds to a file :sad-panda:"
+
 export CONFIG_FOLDER=/go/config
 
 mkdir -p $CONFIG_FOLDER
+
+export HOME=/go
 
 # INFO Store access tokens during deploy time
 # We get access token from `oc secret` during deploy time and store it
