@@ -1,4 +1,3 @@
-$ exec cat /docker-entrypoint.sh
 #!/bin/bash
 
 # Copyright 2017 ThoughtWorks, Inc.
