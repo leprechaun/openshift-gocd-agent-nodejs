@@ -2,7 +2,7 @@
 #!/bin/bash
 set -e
 
-export CONFIG_FOLDER=/usr/share/go-agent/config
+export CONFIG_FOLDER=/go/config
 
 mkdir -p $CONFIG_FOLDER
 
