@@ -22,10 +22,11 @@ RUN wget -O /tmp/hub.tgz https://github.com/github/hub/releases/download/v2.3.0-
     chmod 755 /usr/local/bin/hub
 
 RUN mkdir -p /go && chgrp -R 0 /go && chmod 777 /go
+RUN mkdir -p /godata && chgrp -R 0 /godata && chmod 777 /godata
 WORKDIR /go
 
-ADD entrypoint.sh /
+COPY entrypoint.sh /docker-entrypoint.sh
 RUN chmod 755 /docker-entrypoint.sh
 ADD entrypoint.d/* /docker-entrypoint.d/
 RUN chmod 755 /docker-entrypoint.d/*
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["bash", "/docker-entrypoint.sh"]
