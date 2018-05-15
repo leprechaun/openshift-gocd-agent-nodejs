@@ -42,6 +42,7 @@ setup_autoregister_properties_file_for_normal_agent() {
 
 setup_autoregister_properties_file() {
   mkdir -p ${AGENT_WORK_DIR}
+  touch $1
   if [ -n "$GO_EA_SERVER_URL" ]; then
     setup_autoregister_properties_file_for_elastic_agent "$1"
   else
